@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Product-BIKETI MALL</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src=""></script>
+
+   
+</head>
+<body>
+    <div class="container vh-100">
+        <div class="row justify-content-center h-100">
+            <div class="card my-auto shadow">
+                <div class="card-header text-center bg-primary text-white">
+                      <h2>5-star Payment Form</h2>
+
+                </div>
+                <div class="card-body">
+        <form action="orders.php" method="POST">
+        
+        <label for="phone_no">firstname</label>
+        <input type="tel" name="firstname" id="" placeholder="enter  firstname" required> <br> <br>
+
+
+        <label for="lastname">lastname:</label>
+        <input type="text" name="lastname" id="" placeholder="enter lastname" max="10" required> <br> <br>
+
+        <label for="phone_no">phone_no:</label>
+        <input type="text" name="phone_no" id="" placeholder="enter phone_no" max="10" required> <br> <br>
+
+        <!-- <h4 id="selectedroom">Room selected</h4> -->
+        <label for="room_selected">Room Selected:</label>
+        <select id="cars" name="room_selected">
+          <option >Alasko pub</option>
+          <option >Club 100</option>
+          <option >Kitale club</option>
+          <option >Pavalio hotel</option>
+          <option >Quiver Lounge</option>
+          <option >Suemi hotel</option>
+          <option >Colorado </option>
+          <option >Levoyage resort</option>
+          <option >Supernova hotel</option>
+          <option >kilimani hotel</option>
+          <option >Koinange hotel</option>
+          
+
+        </select>
+        <br>
+
+        <label for="days">Days to occupy</label>
+        <input type="days" id="num1" name="days"/><br>
+        <input type="button" style="background:blue;border-radius: 15px;" value="* price" onclick="sumDays()"/></div> <br>
+                        <div>amount: ksh. <span id="amount"></span></div>
+                        <script>
+                          
+                        function sumDays() {
+                          let num1 = document.getElementById('num1').value;
+                          let sum = Number(num1) * parseInt("1590");
+                          document.getElementById('amount').innerHTML = sum;
+                        }
+                      </script>
+
+        <label for="amount">amount</label>
+        <input type="text" name="amount" id=""  value="" required placeholder="enter amount indicated above in ksh."> <br> <br>
+
+        <!-- <div class="calculation">
+                    
+                        <div>Days to occupy room:</div>
+                        <div><input type="days" id="num1"/></div> <br>
+                        <div><input type="button" style="background:blue;border-radius: 15px;" value="* price" onclick="sumDays()"/></div> <br>
+                        <div>amount: ksh. <span id="amount"></span></div>
+                      
+                       
+                      <script>
+                        function sumDays() {
+                          let num1 = document.getElementById('num1').value;
+                          let sum = Number(num1) * parseInt("1590");
+                          document.getElementById('amount').innerHTML = sum;
+                        }
+                      </script>
+                </div>  <br> -->
+
+
+
+        <input type  ="submit" class="btn btn-primary w-100"
+         name="submit" id="" value="PROCEED TO PAY">
+         
+    </form> 
+
+                </div>
+                <!-- <div class="card-footer text-right">
+                    <small>&copy Jacob Biketi</small>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

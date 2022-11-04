@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    
+    <label for="crd card">Date checked in</label>
+    <input type="date" name="day1" id="day1" placeholder="credit card number" required><br> <br>
+    
+    <label for="crd card">Date checked out</label>
+    <input type="date" name="day2" id="day2" placeholder="credit card number" required><br> <br>
+
+    <button onclick="calculateDays()">Days Occupied</button>
+    <p id="output"></p> 
+    </body>
+    <script>
+        function calculateDays(){
+            var day1=document.getElementById("day1").value;
+            var day2=document.getElementById("day2").value;
+            const date1 = new Date(day1);
+            const date2 = new Date(day2);
+            const time =Math.abs(date2-date1);
+            const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+            document.getElementById("output").innerHTML=days; 
+} 
+    </script>
+</html>

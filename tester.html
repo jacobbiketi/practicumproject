@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8/>
+  <title>JavaScript program to calculate multiplication and division of two numbers </title>
+  <style type="text/css">
+    body {
+      margin: 30px;
+    }
+  </style>
+</head>
+<body>
+ 
+<form>
+  <div>Day:</div>
+  <div><input type="Day" id="num1"/></div>
+  <div><input type="button" value="Price to pay:" onclick="sumDays()"/></div>
+  <div>Total: <span id="Total"></span></div>
+</form>
+ 
+<script>
+  function sumDays() {
+    let num1 = document.getElementById('num1').value;
+    let sum = Number(num1) * parseInt("2");
+    document.getElementById('Total').innerHTML = sum;
+  }
+</script>
+ 
+</body>
+</html>
